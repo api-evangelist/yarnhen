@@ -1,0 +1,16 @@
+generated: '2026-09-26'
+method: searched
+source:
+- https://yarnhen.com/openapi.yml
+- https://yarnhen.com/terms/
+versioning:
+  scheme: path (/v1)
+  contract_version: 0.1.0
+  policy: none published
+  content_policy_version: 2026.09.25-1
+  note: The content policy is versioned (policy.json); "the version in force when a post is moderated is the one that applies to it." Price changes are announced on the pricing page before they apply.
+deprecation: null
+sla: null
+status_page: null
+deprecated_operations: []
+note: No deprecation policy, Sunset/Deprecation headers, SLA or status page are published; https://yarnhen.com/status/ and /changelog/ returned 404 (2026-09-26). Terms and privacy are marked "Draft — pending legal review".

@@ -1,0 +1,177 @@
+{
+  "@context": {
+    "@vocab": "https://yarnhen.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "yarnhen": "https://yarnhen.com/schema#",
+    "Error": "yarnhen:Error",
+    "error": {
+      "@id": "yarnhen:error"
+    },
+    "Account": "yarnhen:Account",
+    "account_id": {
+      "@id": "yarnhen:account_id",
+      "@type": "xsd:string"
+    },
+    "handle": {
+      "@id": "yarnhen:handle",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "yarnhen:status",
+      "@type": "xsd:string"
+    },
+    "balance": {
+      "@id": "yarnhen:balance",
+      "@type": "xsd:integer"
+    },
+    "strikes": {
+      "@id": "yarnhen:strikes",
+      "@type": "xsd:integer"
+    },
+    "card_on_file": {
+      "@id": "yarnhen:card_on_file",
+      "@type": "xsd:boolean"
+    },
+    "email_verified": {
+      "@id": "yarnhen:email_verified",
+      "@type": "xsd:boolean"
+    },
+    "auto_recharge": {
+      "@id": "yarnhen:auto_recharge"
+    },
+    "account_url": {
+      "@id": "yarnhen:account_url",
+      "@type": "@id"
+    },
+    "Location": "yarnhen:Location",
+    "country": {
+      "@id": "yarnhen:country",
+      "@type": "xsd:string"
+    },
+    "state": {
+      "@id": "yarnhen:state",
+      "@type": "xsd:string"
+    },
+    "city": {
+      "@id": "yarnhen:city"
+    },
+    "MessageInput": "yarnhen:MessageInput",
+    "text": {
+      "@id": "yarnhen:text",
+      "@type": "xsd:string"
+    },
+    "topics": {
+      "@id": "yarnhen:topics",
+      "@type": "@id"
+    },
+    "location": {
+      "@id": "yarnhen:location",
+      "@type": "@id"
+    },
+    "StoryInput": "yarnhen:StoryInput",
+    "title": {
+      "@id": "yarnhen:title",
+      "@type": "xsd:string"
+    },
+    "body": {
+      "@id": "yarnhen:body",
+      "@type": "xsd:string"
+    },
+    "ClassifiedInput": "yarnhen:ClassifiedInput",
+    "category": {
+      "@id": "yarnhen:category",
+      "@type": "xsd:string"
+    },
+    "price": {
+      "@id": "yarnhen:price"
+    },
+    "condition": {
+      "@id": "yarnhen:condition",
+      "@type": "xsd:string"
+    },
+    "EventInput": "yarnhen:EventInput",
+    "timezone": {
+      "@id": "yarnhen:timezone",
+      "@type": "xsd:string"
+    },
+    "starts_at": {
+      "@id": "yarnhen:starts_at",
+      "@type": "xsd:dateTime"
+    },
+    "ends_at": {
+      "@id": "yarnhen:ends_at",
+      "@type": "xsd:dateTime"
+    },
+    "occurrences": {
+      "@id": "yarnhen:occurrences",
+      "@container": "@list"
+    },
+    "online_url": {
+      "@id": "yarnhen:online_url",
+      "@type": "@id"
+    },
+    "Post": "yarnhen:Post",
+    "id": {
+      "@id": "yarnhen:id",
+      "@type": "xsd:string"
+    },
+    "site": {
+      "@id": "yarnhen:site",
+      "@type": "xsd:string"
+    },
+    "url": {
+      "@id": "yarnhen:url",
+      "@type": "@id"
+    },
+    "content_trust": {
+      "@id": "yarnhen:content_trust",
+      "@type": "xsd:string"
+    },
+    "license": {
+      "@id": "yarnhen:license"
+    },
+    "author": {
+      "@id": "yarnhen:author"
+    },
+    "published_at": {
+      "@id": "yarnhen:published_at",
+      "@type": "xsd:dateTime"
+    },
+    "expires_at": {
+      "@id": "yarnhen:expires_at",
+      "@type": "xsd:dateTime"
+    },
+    "policy_version": {
+      "@id": "yarnhen:policy_version",
+      "@type": "xsd:string"
+    },
+    "OwnPost": "yarnhen:OwnPost",
+    "submitted_at": {
+      "@id": "yarnhen:submitted_at",
+      "@type": "xsd:dateTime"
+    },
+    "post": {
+      "@id": "yarnhen:post",
+      "@type": "@id"
+    },
+    "rejection": {
+      "@id": "yarnhen:rejection"
+    },
+    "note": {
+      "@id": "yarnhen:note",
+      "@type": "xsd:string"
+    },
+    "moderation": {
+      "@id": "yarnhen:moderation"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Yarnhen API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Yarnhen's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-09-26) from openapi/yarnhen-openapi.yml.",
+  "dcterms:created": "2026-09-26",
+  "dcterms:source": [
+    "openapi/yarnhen-openapi.yml"
+  ]
+}

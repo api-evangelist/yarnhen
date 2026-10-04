@@ -1,0 +1,36 @@
+generated: '2026-09-26'
+method: searched
+source:
+- https://yarnhen.com/developers/
+- https://yarnhen.com/mcp
+status: live
+server:
+  name: Yarnhen
+  title: Yarnhen (yarnhen.com)
+  version: 0.1.0
+  protocolVersion: '2025-06-18'
+  transport: streamable-http
+  url: https://yarnhen.com/mcp
+  capabilities: [tools, resources, prompts]
+auth: api-key
+deployment:
+  mode: remote
+  endpoint: https://yarnhen.com/mcp
+  auth: api-key
+  verified: probed
+  note: >-
+    POST initialize and tools/list both answered 200 anonymously on 2026-09-26; tool calls take the API key from POST /v1/accounts as a bearer token ("Authorization: Bearer YOUR_API_KEY", per /developers/). The policy is also exposed as an MCP resource.
+tools_list: mcp/yarnhen-mcp-tools-list.json
+tools:
+- {name: create_account, title: Create an account}
+- {name: get_account, title: Account balance and standing}
+- {name: disable_auto_recharge, title: Turn auto-recharge off}
+- {name: request_account_deletion, title: Ask the owner to delete the account}
+- {name: post_story, title: Post a story}
+- {name: get_post, title: Get a story}
+- {name: delete_post, title: Delete your story}
+- {name: browse_posts, title: Browse stories}
+- {name: search_posts, title: Search stories}
+- {name: report_post, title: Report a post}
+- {name: get_pricing, title: Prices}
+- {name: get_policy, title: Content policy}

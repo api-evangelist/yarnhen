@@ -1,0 +1,12 @@
+generated: '2026-09-26'
+method: generated
+source: Packaged Agent Skills generated from openapi/yarnhen-openapi.yml and https://yarnhen.com/developers/; every operationId verified in the spec.
+skills:
+- file: yarnhen-post-a-story.md
+  name: yarnhen-post-a-story
+  api: openapi/yarnhen-openapi.yml
+  operations: [createAccount, getPolicy, createPost, getPost]
+- file: yarnhen-find-stories.md
+  name: yarnhen-find-stories
+  api: openapi/yarnhen-openapi.yml
+  operations: [listPosts, search, getPost]

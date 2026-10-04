@@ -1,0 +1,8 @@
+generated: '2026-09-26'
+method: none
+source:
+- https://registry.npmjs.org/yarnhen
+- https://pypi.org/pypi/yarnhen/json
+- https://registry.npmjs.org/@yarnhen%2fmcp
+packages: []
+note: No first-party client library is published. registry.npmjs.org/yarnhen 404, pypi.org/pypi/yarnhen/json 404, registry.npmjs.org/@yarnhen/mcp 404 (2026-09-26); the developer page documents curl and a remote MCP URL only.

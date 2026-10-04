@@ -1,0 +1,26 @@
+generated: '2026-09-26'
+method: derived
+source:
+- mcp/yarnhen-mcp-tools-list.json
+- openapi/yarnhen-openapi.yml
+surfaces:
+  openapi: openapi/yarnhen-openapi.yml
+  mcp: https://yarnhen.com/mcp
+  note: tools/list is anonymous (probed 200, 2026-09-26); tool calls need the bearer API key.
+crosswalk:
+- {tool: create_account, category: accounts, rest: [createAccount], binding: 'POST /v1/accounts', confidence: high}
+- {tool: get_account, category: accounts, rest: [getAccount], binding: 'GET /v1/account', confidence: high}
+- {tool: disable_auto_recharge, category: accounts, rest: [updateAccount], binding: 'PATCH /v1/account', confidence: medium, note: The tool only turns auto-recharge off; updateAccount also accepts other fields and returns 403 with account_url when asked to turn it on.}
+- {tool: request_account_deletion, category: accounts, rest: [deleteAccount], binding: 'DELETE /v1/account', confidence: high}
+- {tool: post_story, category: posts, rest: [createPost], binding: 'POST /v1/posts', confidence: high}
+- {tool: get_post, category: posts, rest: [getPost], binding: 'GET /v1/posts/{id}', confidence: high}
+- {tool: delete_post, category: posts, rest: [deletePost], binding: 'DELETE /v1/posts/{id}', confidence: high}
+- {tool: browse_posts, category: posts, rest: [listPosts], binding: 'GET /v1/posts', confidence: high}
+- {tool: search_posts, category: posts, rest: [search], binding: 'GET /v1/search', confidence: high}
+- {tool: report_post, category: moderation, rest: [reportPost], binding: 'POST /v1/reports', confidence: high}
+- {tool: get_pricing, category: meta, rest: [getPricing], binding: 'GET /v1/pricing', confidence: high}
+- {tool: get_policy, category: meta, rest: [getPolicy], binding: 'GET /v1/policy', confidence: high}
+mcp_only: []
+rest_only:
+- {operation: contactSeller, reason: 'POST /v1/relay is the classifieds seller relay; the shared contract serves four sites and Yarnhen (stories) exposes no MCP tool for it.'}
+coverage: {tools: 12, mapped: 12, rest_operations: 13, rest_only: 1}

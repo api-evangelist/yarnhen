@@ -1,0 +1,27 @@
+{
+  "provider": "yarnhen",
+  "sources": [
+    "_original/yarnhen-openapi.yml",
+    "yarnhen-openapi.yml"
+  ],
+  "outputs": [
+    "yarnhen-accounts-api-openapi.yml",
+    "yarnhen-discovery-api-openapi.yml",
+    "yarnhen-posts-api-openapi.yml",
+    "yarnhen-webhooks-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/yarnhen-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "tag 'Accounts' spans 2 source specs (yarnhen-openapi.yml, yarnhen-openapi.yml): per-path servers applied",
+    "tag 'Discovery' spans 2 source specs (yarnhen-openapi.yml, yarnhen-openapi.yml): per-path servers applied",
+    "tag 'Posts' spans 2 source specs (yarnhen-openapi.yml, yarnhen-openapi.yml): per-path servers applied",
+    "tag 'Webhooks' spans 2 source specs (yarnhen-openapi.yml, yarnhen-openapi.yml): per-path servers applied",
+    "apis.yml register: written (+4 apis, 4 total)"
+  ],
+  "skipped": []
+}

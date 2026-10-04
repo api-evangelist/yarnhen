@@ -1,0 +1,36 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 1
+  own: 1
+  other_domain: 0
+  platform: 0
+  roles:
+  - website
+hosts:
+- host: yarnhen.com
+  found_by:
+  - pointer
+  - apis[]
+  types:
+  - Website
+  - DeveloperPortal
+  - Documentation
+  - Pricing
+  - TermsOfService
+  - PrivacyPolicy
+  - AcceptableUsePolicy
+  - LLMsTxt
+  - APIsJSON
+  - SignUp
+  - Login
+  - RSSFeed
+  - Sitemap
+  serves:
+  - api
+  - docs
+  registrable_domain: yarnhen.com
+  role: website
+  relation: own

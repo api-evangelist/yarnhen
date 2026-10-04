@@ -1,0 +1,23 @@
+name: Yarnhen rate limits
+generated: '2026-09-26'
+method: searched
+source: https://yarnhen.com/pricing/
+limit_count: 2
+limits:
+- name: API search free quota
+  limit_text: 100 a day free
+  max: 100
+  window: 1 day
+  scope: per key
+  endpoint: search
+  note: Metered, not refused, beyond the quota ($0.0010 each); GET /v1/search declares 402 when the balance cannot pay.
+- name: Web search (no account)
+  limit_text: 20 a day per IP, free
+  max: 20
+  window: 1 day
+  scope: per IP
+signaling:
+  headers: [Retry-After]
+  retry_after: GET /v1/posts/{id} returns a Retry-After header and moderation.estimated_decision_at / retry_after_seconds while a post is queued (openapi createPost description; /developers/).
+  exhaustion_status: 429 is declared on reportPost and contactSeller, with no published numeric limit.
+note: No per-second or per-minute request limits are published; no X-RateLimit-* or RateLimit-* headers were observed on an anonymous GET /v1/posts (2026-09-26).
