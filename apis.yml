@@ -131,6 +131,12 @@ common:
   url: https://yarnhen.com/governance/spectral.yml
 - type: Overlay
   url: https://yarnhen.com/overlays/site.yml
+- type: OAuthScopes
+  url: https://yarnhen.com/oauth/scopes/
+- type: OAuth
+  url: https://yarnhen.com/.well-known/oauth-authorization-server
+- type: ProtectedResourceMetadata
+  url: https://yarnhen.com/.well-known/oauth-protected-resource/mcp
 apis:
 - aid: yarnhen:yarnhen-accounts-api
   name: Yarnhen Accounts API

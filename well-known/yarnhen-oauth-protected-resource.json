@@ -1,0 +1,18 @@
+{
+  "resource": "https://yarnhen.com/mcp",
+  "authorization_servers": [
+    "https://yarnhen.com"
+  ],
+  "scopes_supported": [
+    "posts:read",
+    "posts:write",
+    "search",
+    "account:read",
+    "webhooks:manage"
+  ],
+  "bearer_methods_supported": [
+    "header"
+  ],
+  "resource_name": "Yarnhen MCP server",
+  "resource_documentation": "https://yarnhen.com/oauth/scopes/"
+}
