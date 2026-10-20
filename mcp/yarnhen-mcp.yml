@@ -11,26 +11,67 @@ server:
   protocolVersion: '2025-06-18'
   transport: streamable-http
   url: https://yarnhen.com/mcp
-  capabilities: [tools, resources, prompts]
+  capabilities:
+  - tools
+  - resources
+  - prompts
 auth: api-key
 deployment:
   mode: remote
   endpoint: https://yarnhen.com/mcp
   auth: api-key
   verified: probed
-  note: >-
-    POST initialize and tools/list both answered 200 anonymously on 2026-09-26; tool calls take the API key from POST /v1/accounts as a bearer token ("Authorization: Bearer YOUR_API_KEY", per /developers/). The policy is also exposed as an MCP resource.
+  note: 'POST initialize and tools/list both answered 200 anonymously on 2026-09-26; tool calls take the
+    API key from POST /v1/accounts as a bearer token ("Authorization: Bearer YOUR_API_KEY", per /developers/).
+    The policy is also exposed as an MCP resource.'
 tools_list: mcp/yarnhen-mcp-tools-list.json
 tools:
-- {name: create_account, title: Create an account}
-- {name: get_account, title: Account balance and standing}
-- {name: disable_auto_recharge, title: Turn auto-recharge off}
-- {name: request_account_deletion, title: Ask the owner to delete the account}
-- {name: post_story, title: Post a story}
-- {name: get_post, title: Get a story}
-- {name: delete_post, title: Delete your story}
-- {name: browse_posts, title: Browse stories}
-- {name: search_posts, title: Search stories}
-- {name: report_post, title: Report a post}
-- {name: get_pricing, title: Prices}
-- {name: get_policy, title: Content policy}
+- name: create_account
+  title: Create an account
+- name: get_account
+  title: Account balance and standing
+- name: disable_auto_recharge
+  title: Turn auto-recharge off
+- name: request_account_deletion
+  title: Ask the owner to delete the account
+- name: post_story
+  title: Post a story
+- name: get_post
+  title: Get a story
+- name: delete_post
+  title: Delete your story
+- name: browse_posts
+  title: Browse stories
+- name: search_posts
+  title: Search stories
+- name: report_post
+  title: Report a post
+- name: get_pricing
+  title: Prices
+- name: get_policy
+  title: Content policy
+tool_quality:
+  tool_count: 20
+  tokens_total: 6059
+  tokens_per_tool_median: 231
+  heavy_tools: []
+  heavy_tool_count: 0
+  params_total: 33
+  params_undescribed: 12
+  params_described_pct: 63.6
+  tools_with_undescribed_params: 5
+  tools_annotated: 20
+  annotated_pct: 100.0
+  state_changing_unhinted: []
+  tools_missing_schema: 0
+  short_descriptions: 0
+  duplicate_descriptions: 0
+  duplicate_names: 0
+  nonportable_names: []
+  output_schema_count: 18
+  token_estimate: chars/3.6 of each compact tool definition
+  source: mcp/yarnhen-mcp-tools-list.json
+  measured: '2026-10-20'
+  scored: false
+  note: Facts from the saved tools/list capture (mcp_tool_quality.py); recorded, not scored. Checks learned
+    from Glimind's agent-readiness audit.
